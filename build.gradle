@@ -12,6 +12,10 @@ targetCompatibility = 7
 tasks.ghWritePom.pom.artifactId = "resty"
 tasks.ghUpload.repo = "resty"
 
+jar {
+	baseName = "resty"
+}
+
 uploadArchives {
 	repositories {
 		mavenDeployer {
@@ -51,7 +55,7 @@ repositories {
 	mavenRepo url:"http://download.java.net/maven/2/"
 }
 dependencies { 
-	compile "RobertFischer:json-parser:0.0.1.1"
+	compile "RobertFischer:json-parser:[0.0.1.1,0.1)"
 	testCompile "com.sun.jersey:jersey-server:1.5"
 	testCompile "com.sun.grizzly:grizzly-servlet-webserver:1.9.18-i"
 	testCompile "junit:junit:4.8.2"
