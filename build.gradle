@@ -1,13 +1,14 @@
 apply plugin:'java'
 
+sourceCompatibility = 7
+targetCompatibility = 7
+
 version =  "0.3.1.3"
 group = "RobertFischer"
 
-apply from:'http://www.smokejumperit.com/repo.gradle'
-apply from:'http://www.smokejumperit.com/github-dev.gradle'
-
-sourceCompatibility = 7
-targetCompatibility = 7
+apply from:'http://gradle.smokejumperit.com/sjit_repo.gradle'
+apply from:'http://gradle.smokejumperit.com/all-jars.gradle'
+apply from:'http://gradle.smokejumperit.com/github-dev.gradle'
 
 tasks.ghWritePom.pom.artifactId = "resty"
 tasks.ghUpload.repo = "resty"
